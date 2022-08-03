@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
-        run: sudo add-apt-repository ppa:inkscape.dev/stable && sudo apt update && sudo apt install inkscapesudo apt install -y inkscape poppler-utils
+        run: sudo add-apt-repository ppa:inkscape.dev/stable && sudo apt update && sudo apt install -y inkscape poppler-utils
       - name: Checkout code
         uses: actions/checkout@v2
       - name: build
