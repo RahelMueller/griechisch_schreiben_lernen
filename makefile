@@ -6,7 +6,8 @@ build: $(SVGFILES:%.svg=%.pdf)
 	pdfunite $^ heft.pdf
 
 %.pdf : %.svg
-	inkscape -C --export-filename=$*.pdf $*.svg
+	inkscape --file=$*.svg --export-area-drawing --without-gui --export-pdf=$*.pdf
+	#inkscape -C --export-filename=$*.pdf $*.svg for reasonable new inkscape versions
 
 clean:
 	rm *.pdf
